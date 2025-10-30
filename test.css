@@ -1,0 +1,35 @@
+.container {
+    width: 100%;
+    max-width: 1280px;
+    outline: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+
+}
+
+.nav {
+    outline: 1px solid blue;
+    display: flex;
+    flex-grow: 1;
+    gap: 50px;
+
+}
+
+.btn {
+    /* flex-grow: 1; */
+}
+
+.list {
+    display: flex;
+    gap: 100px;
+    flex-grow: 1;
+    justify-content: center;
+}
