@@ -33,17 +33,23 @@
 /* Constants */
 :root {
     --primary-text-color: #31261A;
+    --secondary-text-color: #faf4ea;
+    --primary-background-color: #FAF4EA;
     --primary-green-color: #819B57;
 
 
 }
 
 /* Base settings */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Poppins, sans-serif;
     font-size: 18px;
 
-    background-color: white;
+    background-color: var(--primary-background-color);
     color: var(--primary-text-color);
 
 }
@@ -66,9 +72,11 @@ p {
 }
 
 .container {
-    max-width: 1450px;
-    padding-left: 100px;
-    padding-right: 100px;
+    outline: 1px solid red;
+
+    max-width: 1280px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -78,36 +86,206 @@ p {
 .header {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    gap: 152px;
 
+    padding-top: 32px;
 }
 
-.header-navigation {
+.header-nav {
     display: flex;
     align-items: center;
-    /* justify-content: space-between;
-    gap: 152px; */
+    gap: 152px;
     flex-grow: 1;
+
 }
 
 .header-link {}
 
 .header-list {
     display: flex;
+    align-items: center;
     gap: 64px;
-
+    flex-grow: 0;
+    justify-content: center;
 }
+
+
 
 .header-item {}
 
-.header-btn {}
+.header-link {
+    /* font-family: var(--font-family); */
+    font-weight: 400;
+    font-size: 18px;
+    /* text-align: center; */
+    color: var(--secondary-text-color);
+}
+
+.header-link:hover,
+.header-link:focus {
+    color: var(--primary-green-color);
+}
+
+.header-btn {
+    width: 238px;
+    height: 59px;
+    border: 2px solid var(--primary-green-color);
+    border-radius: 8px;
+    padding: 16px 32px;
+
+    background-color: var(--primary-green-color);
+    color: var(--secondary-text-color);
+
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+
+
+}
+
+.header-btn:hover,
+.header-btn:focus {
+    color: #465929;
+    background-color: white;
+}
 
 /* -----------------------------------Section HERO */
+.hero {
+    padding-top: 181px;
+    padding-bottom: 272px;
+
+    background-image: url("../image/Hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 .hero-title {
     font-weight: 900;
     font-size: 128px;
+    text-align: center;
 }
 
 .hero-title span {
-    color: var(--primary-green-color)
+    color: var(--primary-green-color);
+
+}
+
+/* ------------------------------------Section ADVENTAGES */
+.adventages {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: var(--primary-green-color);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.adventages-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.adventages-item {
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--secondary-text-color);
+
+}
+
+/* -----------------------------CHEFS */
+
+
+.chefs-title {
+
+    max-width: 538px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    font-weight: 900;
+    font-size: 64px;
+
+
+    line-height: 1, 31;
+    text-align: center;
+    color: var(--primary-text-color);
+}
+
+.chefs-title span {
+    color: #465929;
+}
+
+.chefs-title::before,
+.chefs-title::after {
+    display: block;
+    border: 2px solid #cfcfbc;
+    width: 352px;
+    content: "";
+}
+
+
+.chef-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chef-item {}
+
+.chef-card {
+    display: flex;
+}
+
+.chef-box {
+    width: 334px;
+    margin-left: 30px;
+}
+
+.chef-photo {
+    border-radius: 4px 4px 4px 200px;
+
+    box-shadow: -16px 16px 0 0 var(--primary-background-color), -16px 16px 0 2px #a18268;
+}
+
+.chef-box-title {
+    max-width: 334px;
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--primary-text-color);
+    padding-bottom: 16px;
+}
+
+.chef-text {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--primary-text-color);
+    padding-bottom: 20px;
+}
+
+/* ------------------------------FOOTER */
+
+
+.footer {
+    background-color: #31261a;
+    background-image: url(../image/footer-bg.png);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: space-between;
 }
