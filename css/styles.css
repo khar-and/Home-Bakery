@@ -287,5 +287,24 @@ p {
     background-position: center;
 
     display: flex;
-    justify-content: space-between;
+
+
+}
+
+.footer-nav {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.footer-logo {
+    flex-grow: 1;
+}
+
+.footer-nav-list {
+    flex-grow: 1;
+}
+
+.footer-block {
+    display: flex;
+    flex-basis: 50%;
 }
